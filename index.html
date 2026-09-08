@@ -3,11 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
 </head>
 <body>
-<x-dc>
-<helmet>
 <link rel="stylesheet" href="_ds/broadsheet-6cbaed03-9421-4152-ac72-32945e19fa8b/styles.css">
 <script src="_ds/broadsheet-6cbaed03-9421-4152-ac72-32945e19fa8b/_ds_bundle.js"></script>
 <script src="./image-slot.js"></script>
@@ -26,8 +23,10 @@
     --gold-edge:inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(120,86,20,0.28);
   }
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);-webkit-font-smoothing:antialiased}
-  a{color:var(--c2);text-decoration:none}
+  a{color:var(--c2);text-decoration:none;transition:background .15s ease,color .15s ease}
   a:hover{color:var(--deep)}
+  .cta-gold:hover{background:var(--deep) !important;color:var(--paper) !important}
+  .cta-pill:hover{background:var(--c1) !important;color:var(--on1) !important}
   ::selection{background:var(--c1);color:var(--deep)}
   @media (max-width:640px){
     .site-nav{display:none !important}
@@ -58,11 +57,10 @@
   }
   #sib-form .sib-form-block__button:hover { background: var(--deep) !important; }
 </style>
-</helmet>
 
 <div style="background:var(--paper);color:var(--ink);min-height:100vh;overflow-x:hidden">
 
-  <section style="max-width:1140px;margin:0 auto;padding:64px 32px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:52px;align-items:stretch">
+  <section style="max-width:1140px;margin:10px auto 0;padding:64px 32px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:52px;align-items:stretch">
     <div>
       <h1 class="hero-h1" style="margin:0;font-family:var(--fh);font-weight:700;letter-spacing:var(--fhls);font-size:clamp(34px,4.7vw,60px);line-height:1.06;text-wrap:balance"><span style="font-size:41px;line-height:1.15;display:inline-block">Give your child the one <span style="background:var(--gold-sheen);-webkit-background-clip:text;background-clip:text;color:transparent">protection</span> no parental-control app can:</span> <span style="color:var(--c3);font-size:58px">knowing what to do when you're not there</span></h1>
 
@@ -71,7 +69,7 @@
         <p style="margin:0;font-size:19px;line-height:1.6">Decisions School teaches 9–14-year-olds to pause, spot what's happening and decide what to do next without needing an adult beside them.</p>
       </div>
       <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-        <a href="#signup" style="background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 36px" style-hover="background:var(--deep)">Request an info session</a>
+        <a href="#signup" class="cta-gold" style="background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 36px">Request an info session</a>
       </div>
     </div>
     <div style="position:relative">
@@ -82,7 +80,7 @@
       <div style="position:relative;margin:14px 0 0 118px;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end">
         <span style="background:var(--card);border-radius:var(--rp);padding:9px 18px;font-size:14px;color:var(--ink);white-space:nowrap">Fully online</span>
         <span style="background:var(--card);border-radius:var(--rp);padding:9px 18px;font-size:14px;color:var(--ink);white-space:nowrap">Ages 9–14</span>
-        <a href="#pricing" style="background:var(--card);border-radius:var(--rp);padding:9px 18px;font-size:14px;color:var(--ink);white-space:nowrap" style-hover="background:var(--c1);color:var(--on1)">97 EUR a month</a>
+        <a href="#pricing" class="cta-pill" style="background:var(--card);border-radius:var(--rp);padding:9px 18px;font-size:14px;color:var(--ink);white-space:nowrap">97 EUR a month</a>
       </div>
       <div style="position:absolute;left:-14px;bottom:54px;width:118px;height:118px;border-radius:var(--rp);background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(-9deg);font-family:var(--fh);font-weight:700;font-size:14px;line-height:1.25;box-shadow:var(--sh)">Starts<br>mid<br>October</div>
     </div>
@@ -214,7 +212,7 @@
       <p style="margin:0;font-family:var(--fh);font-weight:600;font-size:19px;line-height:1.5;max-width:34em">Every semester we hold a workshop on communication techniques, where kids and parents come together to practise asking for what they need, disagreeing without escalating, and talking about difficult situations.<br><br>So that even when shit hits the fan, your kid feels safe to come to you first.</p>
       <span style="flex:none;width:128px;height:128px;border-radius:var(--rp);background:var(--gold-sheen);box-shadow:var(--gold-edge);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--fh);font-size:17px;font-weight:700;line-height:1.2;transform:rotate(-27deg)">Included</span>
       <div style="flex-basis:100%;display:flex">
-        <a href="#signup" style="background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:16px;padding:17px 30px" style-hover="background:var(--deep)">Request an info session</a>
+        <a href="#signup" class="cta-gold" style="background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:16px;padding:17px 30px">Request an info session</a>
       </div>
     </div>
   </section>
@@ -279,7 +277,7 @@
           <p style="margin:0;font-size:17px;line-height:1.6">Access to the private parent community</p>
           <p style="margin:0;font-size:17px;line-height:1.6">The communication workshop each semester, for kids and parents together</p>
         </div>
-        <a href="#signup" style="display:inline-block;margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:16px;padding:17px 30px" style-hover="background:var(--deep);color:var(--paper)">Request an info session</a>
+        <a href="#signup" class="cta-gold" style="display:inline-block;margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:16px;padding:17px 30px">Request an info session</a>
       </div>
       <div style="border-radius:320px 320px var(--r) var(--r);overflow:hidden;background:var(--c1);min-height:420px">
         <image-slot id="price-arch" shape="rect" fit="cover" style="width:100%;height:100%" placeholder="Drop a photo: you at work, or a session in progress"></image-slot>
@@ -309,7 +307,7 @@
           <p style="margin:0;font-size:17px;line-height:1.65"><strong>Payment reserves the spot.</strong> Groups start mid-October. You can pay monthly but the minimum commitment is 6 months, one semester, so the group stays stable for every child in it.</p>
         </div>
       </div>
-      <a href="#signup" style="display:inline-block;margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 34px" style-hover="background:var(--deep)">Request an info session</a>
+      <a href="#signup" class="cta-gold" style="display:inline-block;margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 34px">Request an info session</a>
     </div>
   </section>
 
@@ -367,7 +365,7 @@
         <h2 style="margin:0 0 18px;font-family:var(--fh);font-weight:700;letter-spacing:var(--fhls);font-size:clamp(26px,3.2vw,42px);line-height:1.12">I coordinate every group myself</h2>
         <p style="margin:0 0 16px;font-size:17px;line-height:1.7">Every story we work on comes through me, whether it came from the kids in the room, from the parent community, or from a case I bring in. That's also why I speak to every parent before their child joins.</p>
         <p style="margin:0;font-size:17px;line-height:1.7;opacity:0.9">I'm Cathy. I've spent more than six years in marketing and I'm currently doing an MSc in behavioural economics, which is a polite way of saying I know how persuasion is built because I've built it.</p>
-        <a href="#signup" style="display:inline-block;margin-top:28px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:18px 34px" style-hover="background:var(--paper)">Request an info session</a>
+        <a href="#signup" class="cta-gold" style="display:inline-block;margin-top:28px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:18px 34px">Request an info session</a>
       </div>
     </div>
   </section>
@@ -432,26 +430,6 @@
     </div>
   </section>
 
-  <sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
-    <section style="max-width:1140px;margin:0 auto;padding:72px 32px 40px">
-      <p style="margin:0 0 20px;display:inline-block;background:#dfe6f7;color:var(--c3);border-radius:var(--rp);padding:9px 18px;font-family:var(--fh);font-size:13px;font-weight:600">In their words</p>
-      <p style="margin:0 0 28px;max-width:34em;font-size:17px;line-height:1.7;color:var(--muted)">Reserved for the first families. Their feedback goes here once the groups are running.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
-        <div style="background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:32px 30px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-          <p style="margin:0;font-family:var(--fh);font-weight:500;font-size:20px;line-height:1.4;color:var(--muted)">Parent quote</p>
-          <p style="margin:0;font-size:14px;color:var(--muted)">Parent, group 9–11</p>
-        </div>
-        <div style="background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:32px 30px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-          <p style="margin:0;font-family:var(--fh);font-weight:500;font-size:20px;line-height:1.4;color:var(--muted)">Parent quote</p>
-          <p style="margin:0;font-size:14px;color:var(--muted)">Parent, group 12–14</p>
-        </div>
-        <div style="background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:32px 30px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-          <p style="margin:0;font-family:var(--fh);font-weight:500;font-size:20px;line-height:1.4;color:var(--muted)">Parent quote</p>
-          <p style="margin:0;font-size:14px;color:var(--muted)">Parent, group 12–14</p>
-        </div>
-      </div>
-    </section>
-  </sc-if>
 
   <section style="max-width:1140px;margin:0 auto;padding:32px 32px 64px">
     <div style="background:var(--c3);color:var(--on3);border-radius:var(--r);padding:clamp(36px,5.5vw,76px);text-align:center;display:flex;flex-direction:column;align-items:center">
@@ -460,7 +438,7 @@
       <p style="margin:20px 0 0;max-width:34em;font-size:17px;line-height:1.7;opacity:0.9">The platforms will change. The group chats will change. The ways people try to influence your child will change.</p>
       <p style="margin:0;max-width:20em;font-family:var(--fh);font-weight:700;letter-spacing:var(--fhls);font-size:clamp(28px,4vw,54px);line-height:1.08;margin-top:36px">The ability to think critically and make their own decisions is what carries over.</p>
       <p style="margin:20px 0 0;max-width:34em;font-size:17px;line-height:1.7;opacity:0.9">to the next app, the next platform, the next group chat, and eventually, life beyond your supervision.</p>
-      <a href="#signup" style="margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 38px" style-hover="background:var(--paper)">Request an info session</a>
+      <a href="#signup" class="cta-gold" style="margin-top:32px;background:var(--gold-sheen);box-shadow:var(--gold-edge);color:var(--on1);border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:17px;padding:19px 38px">Request an info session</a>
       <p style="margin:22px 0 0;max-width:32em;font-size:15px;line-height:1.7;opacity:0.85">Info sessions before we start. Schedule announced 9 October.<br>97 EUR a month, six months minimum.</p>
     </div>
   </section>
@@ -596,49 +574,6 @@
 
 </div>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;pairing&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Royal and gold&quot;,&quot;Ink and champagne&quot;,&quot;Bright royal&quot;],&quot;default&quot;:&quot;Royal and gold&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;softness&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:12,&quot;min&quot;:0,&quot;max&quot;:44,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;showTestimonials&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
-const PAIRINGS = {
-  "Royal and gold": {
-    "--paper": "#f6f7fb", "--card": "#ffffff", "--ink": "#141b33", "--muted": "#5c6480",
-    "--c1": "#d9b25b", "--c2": "#1e3a8f", "--c3": "#16295f", "--deep": "#101733",
-    "--on1": "#141b33", "--on2": "#ffffff", "--on3": "#ffffff",
-    "--fh": "'Poppins', system-ui, sans-serif", "--fb": "'Karla', system-ui, sans-serif",
-    "--fhls": "-0.02em"
-  },
-  "Ink and champagne": {
-    "--paper": "#ffffff", "--card": "#f4f6fb", "--ink": "#111832", "--muted": "#59617c",
-    "--c1": "#c9a95a", "--c2": "#16265c", "--c3": "#0e1b45", "--deep": "#0b1230",
-    "--on1": "#111832", "--on2": "#ffffff", "--on3": "#ffffff",
-    "--fh": "'Sora', system-ui, sans-serif", "--fb": "'Karla', system-ui, sans-serif",
-    "--fhls": "-0.03em"
-  },
-  "Bright royal": {
-    "--paper": "#f5f7ff", "--card": "#ffffff", "--ink": "#161e3d", "--muted": "#5a628a",
-    "--c1": "#e6c46a", "--c2": "#2447b8", "--c3": "#1a2f7a", "--deep": "#121a3a",
-    "--on1": "#161e3d", "--on2": "#ffffff", "--on3": "#ffffff",
-    "--fh": "'DM Serif Display', Georgia, serif", "--fb": "'Karla', system-ui, sans-serif",
-    "--fhls": "-0.01em"
-  }
-};
-
-class Component extends DCLogic {
-  applyPairing() {
-    const p = PAIRINGS[this.props.pairing] || PAIRINGS["Royal and gold"];
-    const root = document.documentElement;
-    Object.keys(p).forEach(k => root.style.setProperty(k, p[k]));
-    const soft = this.props.softness ?? 28;
-    root.style.setProperty("--r", soft + "px");
-    root.style.setProperty("--rs", Math.round(soft * 0.64) + "px");
-  }
-  componentDidMount() { this.applyPairing(); }
-  componentDidUpdate() { this.applyPairing(); }
-  renderVals() {
-    return { showTestimonials: this.props.showTestimonials ?? true };
-  }
-}
-
-</script>
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
